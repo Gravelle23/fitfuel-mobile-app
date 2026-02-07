@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitFuel Mobile</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <main class="app">
+    <header class="header">
+      <div class="headerTop">
+        <div>
+          <h1>FitFuel</h1>
+          <p class="sub">Simple workout notes</p>
+        </div>
+          <button id="themeToggle" class="iconBtn" type="button" aria-label="Toggle theme">
+            🌙
+          </button>
+        </div>
+
+        <div class="toolbar">
+          <a class="ghostBtn" href="index.html">Home</a>
+          <a class="ghostBtn" href="history.html">History</a>
+        </div>
+
+      <div class="toolbar">
+        <input id="searchInput" class="input" type="search" placeholder="Search workouts..." />
+        <select id="filterCategory" class="input select">
+          <option value="all">All</option>
+          <option value="Strength">Strength</option>
+          <option value="Cardio">Cardio</option>
+          <option value="Legs">Legs</option>
+          <option value="Push">Push</option>
+          <option value="Pull">Pull</option>
+          <option value="Recovery">Recovery</option>
+        </select>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Stats</h2>
+      <div class="stats">
+        <div class="stat">
+          <p class="statLabel">Total Workouts</p>
+          <p id="statTotal" class="statValue">0</p>
+        </div>
+        <div class="stat">
+          <p class="statLabel">Top Category</p>
+          <p id="statTopCat" class="statValue">—</p>
+        </div>
+        <div class="stat">
+          <p class="statLabel">Last Workout</p>
+          <p id="statLast" class="statValue statSmall">—</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Add Workout</h2>
+
+      <label class="label" for="workoutName">Workout Name</label>
+      <input id="workoutName" class="input" type="text" placeholder="Ex: Chest day" />
+
+      <label class="label" for="workoutCategory">Category</label>
+      <select id="workoutCategory" class="input select">
+        <option value="Strength">Strength</option>
+        <option value="Cardio">Cardio</option>
+        <option value="Legs">Legs</option>
+        <option value="Push">Push</option>
+        <option value="Pull">Pull</option>
+        <option value="Recovery">Recovery</option>
+      </select>
+
+      <label class="label" for="workoutNotes">Notes (optional)</label>
+      <textarea id="workoutNotes" class="input textarea" placeholder="How did it feel?"></textarea>
+
+      <button id="addBtn" class="btn" type="button">Add Workout</button>
+      <p id="message" class="message" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <div class="cardTitleRow">
+        <h2>Your Workouts</h2>
+        <button id="clearAllBtn" class="ghostBtn" type="button">Clear All</button>
+      </div>
+
+      <ul id="workoutList" class="list"></ul>
+      <p id="emptyState" class="muted">No workouts yet.</p>
+    </section>
+  </main>
+
+  <!-- edit modal -->
+  <div id="modalBackdrop" class="modalBackdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <div class="modalHeader">
+        <h3 id="modalTitle">Edit Workout</h3>
+        <button id="modalClose" class="iconBtn" type="button" aria-label="Close">✕</button>
+      </div>
+
+      <label class="label" for="editName">Workout Name</label>
+      <input id="editName" class="input" type="text" />
+
+      <label class="label" for="editCategory">Category</label>
+      <select id="editCategory" class="input select">
+        <option value="Strength">Strength</option>
+        <option value="Cardio">Cardio</option>
+        <option value="Legs">Legs</option>
+        <option value="Push">Push</option>
+        <option value="Pull">Pull</option>
+        <option value="Recovery">Recovery</option>
+      </select>
+
+      <label class="label" for="editNotes">Notes</label>
+      <textarea id="editNotes" class="input textarea"></textarea>
+
+      <div class="modalActions">
+        <button id="modalSave" class="btn" type="button">Save Changes</button>
+        <button id="modalCancel" class="ghostBtn" type="button">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
