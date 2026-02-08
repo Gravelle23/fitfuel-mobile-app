@@ -1,0 +1,26 @@
+{
+  "name": "fitfuel-mobile-app",
+  "version": "1.0.0",
+  "description": "FitFuel is a mobile-first workout log built using only HTML, CSS, and JavaScript. Users can add workouts with a category and notes, search and filter their history, edit or delete entries, and switch between light and dark mode. Workouts are saved using `localStorage` so the data persists after refreshing the page.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gravelle23/fitfuel-mobile-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Gravelle23/fitfuel-mobile-app/issues"
+  },
+  "homepage": "https://github.com/Gravelle23/fitfuel-mobile-app#readme",
+  "dependencies": {
+    "@capacitor/android": "^8.0.2",
+    "@capacitor/cli": "^8.0.2",
+    "@capacitor/core": "^8.0.2"
+  }
+}

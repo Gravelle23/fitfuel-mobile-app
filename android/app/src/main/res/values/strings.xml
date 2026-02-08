@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">fitfuel</string>
+    <string name="title_activity_main">fitfuel</string>
+    <string name="package_name">com.aaron.fitfuel</string>
+    <string name="custom_url_scheme">com.aaron.fitfuel</string>
+</resources>
